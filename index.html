@@ -14,22 +14,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <div class="nav-container">
-        <div class="logo">
-          <img src="images/logo.png" alt="Hesselgaard" />
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#">Glamping</a></li>
-            <li><a href="#">Fællessalen</a></li>
-            <li><a href="#">Det sker</a></li>
-            <li><a href="#">Om os</a></li>
-            <li><a href="#">Kontakt</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <header class="navbar">
+      <div class="logo">Hesselgaard®</div>
+
+      <!-- Her bygges javascript menuen dynamisk -->
+      <nav id="navbar" class="nav-links"></nav>
+  </header>
 
     <section class="hero">
       <div class="hero-item">
@@ -200,5 +190,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/header.js"></script>
   </body>
 </html>
