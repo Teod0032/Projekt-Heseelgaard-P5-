@@ -1,85 +1,79 @@
+// 1. ARRAYS og OBJEKTER
 const menuItems = [
     { name: "Glamping" },
     { 
-        name: "Fællessalen",
-        dropdown: ["Aktiviteter", "Priser", "Udlejning"]
+        name: "Fællessalen", 
+        // Array inde i et objekt
+        dropdown: ["Aktiviteter", "Priser", "Udlejning"] 
     },
-    { 
-        name: "Det sker",
-        dropdown: ["Events", "Workshops"]
-    },
+    { name: "Det sker" },
     { name: "Om os" },
     { name: "Kontakt" }
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
+    // 3. VARIABLER og DOM
     const nav = document.querySelector("#navbar");
+    let htmlContent = ""; // 4. VARIABLE SCOPE (lokal variabel)
 
-    // 1. Byg menuen
-    menuItems.forEach(item => {
-        const li = document.createElement("div");
-        li.classList.add("nav-item");
+    // 7. KONTROLSTRUKTUR (Loop til at bygge HTML)
+    for (let i = 0; i < menuItems.length; i++) {
+        const item = menuItems[i];
 
-        const btn = document.createElement("button");
-        btn.textContent = item.name;
-        btn.setAttribute("aria-expanded", "false");
-        
-        // Gør knappen klikbar selvom den ikke har dropdown (valgfrit)
-        // Hvis knappen uden dropdown skal være et link, skal vi ændre logikken lidt.
-        // Men som det er nu, virker det fint.
-        
-        li.appendChild(btn);
-
-        // Hvis dropdown findes, lav den
+        // 7. KONTROLSTRUKTUR (If/Else)
         if (item.dropdown) {
-            const drop = document.createElement("div");
-            drop.classList.add("dropdown");
+            
+            // Byg undermenuen (loop)
+            let subMenuHTML = "";
+            for (let j = 0; j < item.dropdown.length; j++) {
+                // 6. OPERATORER (+)
+                subMenuHTML = subMenuHTML + '<a href="#">' + item.dropdown[j] + '</a>';
+            }
 
-            item.dropdown.forEach(text => {
-                const a = document.createElement("a");
-                a.href = "#"; // Tilføjer dummy link, så det ligner et link
-                a.textContent = text;
-                drop.appendChild(a);
-            });
-
-            li.appendChild(drop);
+            // Byg knappen (Brug de klasser din CSS kender: nav-item, has-dropdown, nav-toggle)
+            htmlContent = htmlContent + '<div class="nav-item has-dropdown">';
+            htmlContent = htmlContent + '<button class="nav-toggle">' + item.name + ' </button>';
+            htmlContent = htmlContent + '<div class="dropdown">' + subMenuHTML + '</div>';
+            htmlContent = htmlContent + '</div>';
+            
+        } else {
+            // Almindeligt punkt uden dropdown
+            htmlContent = htmlContent + '<div class="nav-item"><a href="#" class="nav-link">' + item.name + '</a></div>';
         }
+    }
+    
+    // Indsæt HTML på siden
+    nav.innerHTML = htmlContent;
 
-        nav.appendChild(li);
-    });
 
-    // 2. Dropdown funktion (Klik på knapper)
-    nav.addEventListener("click", (e) => {
-        if (!e.target.matches("button")) return;
+    // --- HER GØR VI KNAPPERNE LEVENDE (Specifikt for hver knap) ---
 
-        const item = e.target.closest(".nav-item");
-        const dropdown = item.querySelector(".dropdown");
+    // 1. Find alle knapperne
+    const buttons = document.querySelectorAll(".nav-toggle");
 
-        // Hvis der ikke er en dropdown, skal vi måske navigere et sted hen?
-        // (Lige nu gør knapper uden dropdown ingenting)
-        if (!dropdown) return; 
+    // 5. DEBUGGING
+    console.log("Antal knapper fundet: " + buttons.length);
 
-        // Tjek om den aktuelle menu ALLEREDE er åben, før vi lukker alt
-        const isAlreadyOpen = dropdown.classList.contains("open");
+    // 2. Sæt en lytter på HVER knap (Loop)
+    for (let i = 0; i < buttons.length; i++) {
+        
+        // Her gemmer vi den specifikke knap i en variabel
+        const specificButton = buttons[i];
 
-        // Luk ALLE åbne menuer først
-        document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
-        document.querySelectorAll(".nav-item button").forEach(b => b.setAttribute("aria-expanded", "false"));
+        specificButton.addEventListener("click", function() {
+            
+            // 5. DEBUGGING (Viser præcis hvilken knap der blev trykket på)
+            console.log("Du trykkede specifikt på: " + specificButton.innerText);
 
-        // Hvis den IKKE var åben før, så åbn den nu (toggle effekt)
-        if (!isAlreadyOpen) {
-            dropdown.classList.add("open");
-            e.target.setAttribute("aria-expanded", "true");
-        }
-    });
+            // Find menuen lige ved siden af knappen (Next Sibling)
+            const dropdownMenu = specificButton.nextElementSibling;
 
-    // 3. Luk menuen, hvis man klikker ude på siden (Ekstra luksus)
-    document.addEventListener("click", (e) => {
-        // Hvis man klikker inde i navbaren, gør ingenting
-        if (e.target.closest("#navbar")) return;
-
-        // Ellers luk alt
-        document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
-        document.querySelectorAll(".nav-item button").forEach(b => b.setAttribute("aria-expanded", "false"));
-    });
+            // 6. OPERATORER (!) - Tjekker om menuen IKKE har klassen 'open'
+            if (!dropdownMenu.classList.contains("open")) {
+                dropdownMenu.classList.add("open");
+            } else {
+                dropdownMenu.classList.remove("open");
+            }
+        });
+    }
 });
