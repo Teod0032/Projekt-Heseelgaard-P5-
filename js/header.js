@@ -2,7 +2,7 @@ const menuItems = [
     { name: "Glamping" },
     { 
         name: "Fællessalen",
-        dropdown: ["Aktiviteter", "Priser", "Stemning"]
+        dropdown: ["Aktiviteter", "Priser", "Udlejning"]
     },
     { 
         name: "Det sker",
