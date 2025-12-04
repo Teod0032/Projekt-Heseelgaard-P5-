@@ -1,1 +1,0 @@
- alert("Du følger nu ");
