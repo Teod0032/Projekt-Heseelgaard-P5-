@@ -1,19 +1,15 @@
 
 let heroSection = document.querySelector('.hero');
-
-
 let leftItem = document.querySelector('.hero-item:first-child');
-
-
 let rightItem = document.querySelector('.hero-item:last-child');
 
-
 leftItem.addEventListener('mouseover', function() {
-    leftItem.style.clipPath = 'polygon(0 0, 70% 0, 60% 100%, 0% 100%)';
+    leftItem.style.clipPath = 'polygon(0 0, 62% 0, 52% 100%, 0% 100%)';
 });
 
+
 rightItem.addEventListener('mouseover', function() {
-    leftItem.style.clipPath = 'polygon(0 0, 40% 0, 30% 100%, 0% 100%)';
+    leftItem.style.clipPath = 'polygon(0 0, 48% 0, 38% 100%, 0% 100%)';
 });
 
 
