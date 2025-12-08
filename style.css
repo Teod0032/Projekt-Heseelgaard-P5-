@@ -43,14 +43,11 @@ a {
    NY NAVIGATION (Indsat her)
    ========================================= */
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #d8b2b2; /* Din nye rosa farve */
-  color: white;
-}
+   .navbar {
+    flex-direction: column; /* Stacks logo on top, menu below */
+    padding: 10px 20px;     /* Reduces padding to save space */
+    gap: 15px;              /* Space between logo and menu */
+  }
 
 .logo {
   font-size: 28px;
@@ -61,9 +58,10 @@ a {
 
 /* --- LINKS --- */
 .nav-links {
-  display: flex;
-  gap: 35px;
-  list-style: none; /* Tilføjet for en sikkerheds skyld hvis det er en <ul> */
+  gap: 10px;           
+  justify-content: center; 
+  flex-wrap: wrap;        
+  width: 100%;
 }
 
 .nav-item {
@@ -78,6 +76,11 @@ a {
   cursor: pointer;
   font-family: "Poppins", sans-serif; /* Sikrer at knappen matcher resten af siden */
 }
+.nav-item a,
+  .nav-item button {
+    font-size: 13px;        
+    padding: 0;             
+  }
 
 /* --- DROPDOWN --- */
 .dropdown {
@@ -544,19 +547,3 @@ footer .logo img {
   }
 }
 
-@media (max-width: 600px){
-
-.hamburger {
-  display: none; 
-  cursor: pointer;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background-color: white; 
-  transition: all 0.3s ease;
-}
-}
