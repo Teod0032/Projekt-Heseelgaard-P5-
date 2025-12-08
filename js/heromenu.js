@@ -1,18 +1,44 @@
+console.log("Script start: heromenu.js indlæst");
 
 let heroSection = document.querySelector('.hero');
 let leftItem = document.querySelector('.hero-item:first-child');
 let rightItem = document.querySelector('.hero-item:last-child');
 
-leftItem.addEventListener('mouseover', function() {
-    leftItem.style.clipPath = 'polygon(0 0, 62% 0, 52% 100%, 0% 100%)';
-});
+
+let alleItems = [leftItem, rightItem];
 
 
-rightItem.addEventListener('mouseover', function() {
-    leftItem.style.clipPath = 'polygon(0 0, 48% 0, 38% 100%, 0% 100%)';
-});
+let styles = {
+    venstreStor: 'polygon(0 0, 62% 0, 52% 100%, 0% 100%)', 
+    venstreLille: 'polygon(0 0, 48% 0, 38% 100%, 0% 100%)', 
+    standard: 'polygon(0 0, 55% 0, 45% 100%, 0% 100%)'    
+};
+
+for (let i = 0; i < alleItems.length; i++) {
+
+    let aktueltItem = alleItems[i]; 
+
+    aktueltItem.addEventListener('mouseover', function() {
+        
+        
+        if (i === 0) {
+            console.log("If- kører: Mus på venstre side"); 
+            
+            alleItems[0].style.clipPath = styles.venstreStor;
+
+        } else {
+            console.log("Else- kører: Mus på højre side"); 
+            
+        
+            alleItems[0].style.clipPath = styles.venstreLille;
+        }
+    });
+}
 
 
 heroSection.addEventListener('mouseleave', function() {
-    leftItem.style.clipPath = 'polygon(0 0, 55% 0, 45% 100%, 0% 100%)';
+    console.log("Resetter layout"); 
+    
+   
+    alleItems[0].style.clipPath = styles.standard;
 });
