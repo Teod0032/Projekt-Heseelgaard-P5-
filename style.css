@@ -577,11 +577,14 @@ Padding-top:40px;
 }
 
 
-.pil{
+.pil {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
+  /* Tilføj denne linje herunder: */
+  transform: translateY(-50%); 
+  
+  width: auto; /* Bemærk: Du overskriver denne længere nede med 60px */
   color: #4a5d43; 
   font-weight: bold;
   font-size: 30px;
