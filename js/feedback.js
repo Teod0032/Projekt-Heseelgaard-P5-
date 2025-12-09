@@ -1,8 +1,8 @@
 
 let personer = [
-  { navn: "Josefine Rasmussen", tekst: "Efter min første time følte jeg mig både afslappet og fyldt med energi – kan varmt anbefales!", billede: "billeder/p3.jpg", alt:"prpfilbillede"},
-  { navn: "Oskar Petersen", tekst:"Stemningen her er helt unik, man føler sig straks velkommen.", billede: "billeder/p2.jpg" , alt:"prpfilbillede"},
-  { navn: "Mathilde Alison", tekst: "Et sted, man bare vil blive ved med at besøge, da der er en indre ro på det dejlige sted.", billede: "billeder/p1.jpg", alt:"prpfilbillede" }
+  { navn: "Josefine Rasmussen", tekst: "Efter min første time følte jeg mig både afslappet og fyldt med energi – kan varmt anbefales!", billede: "images/p3.jpg", alt:"profilbillede af Josefine"},
+  { navn: "Oskar Petersen", tekst:"Stemningen her er helt unik, man føler sig straks velkommen.", billede: "images/p2.jpg" , alt:"profilbillede af Oskar"},
+  { navn: "Mathilde Alison", tekst: "Et sted, man bare vil blive ved med at besøge, da der er en indre ro på det dejlige sted.", billede: "images/p1.jpg", alt:"profilbillede af Mathilde" }
 ];
 
 let boks = document.getElementById("slider-container"); // er dette en global ... ? tager tager først fat i dette scope//
