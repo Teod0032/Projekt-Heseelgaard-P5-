@@ -1107,39 +1107,4 @@
   text-align: center;
   
   }
-  
-  }
-  
-  
-  
-  @media (max-width: 600px){
-  
-  
-  
-  .hamburger {
-  
-  display: none;
-  
-  cursor: pointer;
-  
-  }
-  
-  
-  
-  .bar {
-  
-  display: block;
-  
-  width: 25px;
-  
-  height: 3px;
-  
-  margin: 5px auto;
-  
-  background-color: white;
-  
-  transition: all 0.3s ease;
-  
-  }
-  
-  }
+}
