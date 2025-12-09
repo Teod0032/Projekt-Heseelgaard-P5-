@@ -5,18 +5,18 @@ let personer = [
   { navn: "Mathilde Alison", tekst: "Et sted, man bare vil blive ved med at besøge, da der er en indre ro på det dejlige sted.", billede: "images/p1.jpg", alt:"profilbillede af Mathilde" }
 ];
 
-let boks = document.getElementById("slider-container"); // er dette en global ... ? tager tager først fat i dette scope//
+let boks = document.getElementById("slider-container"); 
 
 if (personer.length>0){
 
-    for (let i = 0; i < personer.length; i++) { // for så er dette ... //
-      let person = personer[i]; //lokal//
+    for (let i = 0; i < personer.length; i++) { 
+      let person = personer[i]; 
 
-      boks.innerHTML += // hernede putter jeg så det indhold i min tidliger letboks? derfor skriver jeg boks for ellers ved jeg ikke hvor jeg skal putte mit HTML dokument ned i //
+      boks.innerHTML += 
         '<div class="slides">' +
           '<div class="sliderContent">' +
             '<div class="content__profil">' +
-              '<img src="' + person.billede + '" alt="'+person.alt+'">' + // skal jeg bruge alt//
+              '<img src="' + person.billede + '" alt="'+person.alt+'">' +
             '</div>' +
             '<div class="content__tekst-boks">' +
                 '<h3>' + person.navn + '</h3>' +
@@ -29,8 +29,6 @@ if (personer.length>0){
 }
 
 
-
-// --- HJLÆLP FRA CHAT- GPT & W3 SCHOOL, SE BILAG ---//
 function right() {
   let bredde = boks.clientWidth;
   boks.scrollBy({ left: bredde, behavior: 'smooth' });
@@ -40,3 +38,18 @@ function left() {
   let bredde = boks.clientWidth;
   boks.scrollBy({ left: -bredde, behavior: 'smooth' });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --- HJLÆLP FRA CHAT- GPT & W3 SCHOOL, SE BILAG FOR JANNE ---//
