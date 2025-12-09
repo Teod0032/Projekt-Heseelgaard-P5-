@@ -599,7 +599,7 @@ Padding-top:40px;
   color: #C29897;
 }
 
-.prev { left: 15px; }
+.prev { left: 50px; }
 .next { right: 15px; }
 
 @media (max-width: 600px) {
@@ -773,15 +773,12 @@ footer {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  
   }
   
   
   
   .hero-text {
-  
   font-size: 2.5rem;
-  
   }
   
   h2 {
