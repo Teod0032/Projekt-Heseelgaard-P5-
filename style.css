@@ -107,15 +107,14 @@
   
   
   .logo {
-  
-  font-size: 28px;
-  
-  font-weight: bold;
-  
-  /* Hvis du stadig bruger et billede som logo, skal du måske tilføje:
-  
-  display: flex; align-items: center; */
-  
+    /* This ensures the container aligns the image correctly */
+    display: flex;
+    align-items: center; 
+  }
+
+  .navbar .logo img {
+    height: 40px; /* Adjust this number to make the logo bigger/smaller */
+    width: auto;  /* Maintains the aspect ratio */
   }
   
   
