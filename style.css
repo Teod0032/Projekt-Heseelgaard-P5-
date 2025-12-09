@@ -581,10 +581,8 @@ Padding-top:40px;
   cursor: pointer;
   position: absolute;
   top: 50%;
-  /* Tilføj denne linje herunder: */
   transform: translateY(-50%); 
-  
-  width: auto; /* Bemærk: Du overskriver denne længere nede med 60px */
+  width: auto; 
   color: #4a5d43; 
   font-weight: bold;
   font-size: 30px;
