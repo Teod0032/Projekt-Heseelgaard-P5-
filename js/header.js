@@ -1,4 +1,4 @@
-// hjælp fra GEMINI se promt bilag 
+// hjælp fra GEMINI se promt bilag fra Nina 
 
 const menuItems = [
     { name: "Glamping" },
