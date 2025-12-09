@@ -599,7 +599,7 @@ Padding-top:40px;
   color: #C29897;
 }
 
-.prev { left: 50px; }
+.prev { left: 15px; }
 .next { right: 15px; }
 
 @media (max-width: 600px) {
