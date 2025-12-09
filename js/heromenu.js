@@ -19,7 +19,11 @@ for (let i = 0; i < alleItems.length; i++) {
     let aktueltItem = alleItems[i]; 
 
     aktueltItem.addEventListener('mouseover', function() {
-        
+
+        if (window.innerWidth <= 768) {
+            console.log("Mobil-visning: Animation deaktiveret");
+            return; 
+        }
         
         if (i === 0) {
             console.log("If- kører: Mus på venstre side"); 
