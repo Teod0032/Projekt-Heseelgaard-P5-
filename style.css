@@ -855,9 +855,30 @@
   
     
     flex-direction: column;
-    
+    padding: 20px 10px;
     }
   
+    .nav-links {
+      display: flex;
+      flex-direction: column; /* Stacks the links vertically */
+      align-items: center;    /* Centers the links */
+      width: 100%;            /* Ensures they use the full width */
+      gap: 15px;              /* Adds space between each link */
+      margin-top: 20px;       /* Adds space between the logo and the links */
+    }
+  
+    .nav-item {
+      width: 100%;            /* Makes the click area nice and wide */
+      text-align: center;
+    }
+    
+    /* Ensures the dropdown button text is centered */
+    .nav-item button {
+      width: 100%;
+      text-align: center;
+    }
+
+    
   .hero {
   
   position: static;
