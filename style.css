@@ -577,7 +577,7 @@ Padding-top:40px;
 }
 
 
-.arrow {
+.pil{
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -595,7 +595,7 @@ Padding-top:40px;
 }
 
 
-.arrow:hover {
+.pil:hover {
   color: #C29897;
 }
 
