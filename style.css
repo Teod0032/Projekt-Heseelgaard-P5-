@@ -695,8 +695,6 @@ footer {
   
   @media (max-width: 768px) {
   
- 
-
   
   .navbar {
     flex-direction: column;
@@ -750,7 +748,6 @@ footer {
   
   .hero-item img {
   
-  /* RETTELSE: Sørger for billedet fylder bredden og beholder proportioner */
   
   width: 100%;
   
@@ -838,20 +835,14 @@ footer {
   }
   
   .arrow.right {
-  
   right: 10px;
-  
   z-index: 10;
-  
   color: white;
-  
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   
   }
   
-  
-@media (max-width: 768px) {
-  
+
  
   .slider-section {
     height: auto; 
@@ -880,7 +871,7 @@ footer {
   }
 
   .pil {
-    width: 40px;      
+    width: -10px;      
     font-size: 24px;  
   }
   
@@ -924,4 +915,4 @@ footer {
   
   }
   
-  
+}
