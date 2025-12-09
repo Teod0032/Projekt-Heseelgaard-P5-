@@ -1,8 +1,8 @@
 // hjælp fra GEMINI se promt bilag 
 
 const menuItems = [
-{ name: "Glamping" },
-{
+    { name: "Glamping" },
+    {
     name: "Fællessalen",
     
      dropdown: ["Aktiviteter", "Priser", "Udlejning"]
@@ -10,7 +10,7 @@ const menuItems = [
     { name: "Det sker" },
     { name: "Om os" },
     { name: "Kontakt" }
-     ];
+];
     
     
     // variabler og DOM
@@ -71,7 +71,7 @@ const menuItems = [
             }
         });
     }
-});
+
  
     
     

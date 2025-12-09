@@ -852,7 +852,22 @@
   
   Du vil måske opleve at menuen ser lidt mast ud på mobil. */
   
+  .navbar {
   
+    display: flex;
+    
+    justify-content: space-between;
+    
+    align-items: center;
+    
+    padding: 20px 40px;
+    
+    background-color: deeppink; /* Din nye rosa farve */
+    
+    color: white;
+    flex-direction: column;
+    
+    }
   
   .hero {
   
