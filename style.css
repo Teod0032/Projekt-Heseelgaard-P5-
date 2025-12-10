@@ -499,7 +499,7 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
-.karusel-slider-container::-webkit-scrollbar
+
 
 .karusel-slider-container::-webkit-scrollbar { display: none; }
 
