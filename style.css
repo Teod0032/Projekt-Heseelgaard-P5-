@@ -499,6 +499,7 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
+.karusel-slider-container::-webkit-scrollbar
 
 .karusel-slider-container::-webkit-scrollbar { display: none; }
 
@@ -866,7 +867,8 @@ footer {
   }
 
   .pil {
-    width: -10px;      
+    width: -10px; 
+    position:absolute;     
     font-size: 24px;  
   }
   
