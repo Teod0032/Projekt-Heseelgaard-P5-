@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Gallery script initialized successfully.");
 
   // REQUIREMENT: Arrays & Objects
-  // Updated to use local images from the "images/gallery" folder
-  const galleryData = [
+const galleryData = [
     {
       url: "images/gallery/1.png",
       alt: "Lyst interiør i fællessalen",
