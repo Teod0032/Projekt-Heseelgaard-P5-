@@ -867,8 +867,9 @@ footer {
   }
 
   .pil {
-    width: -10px; 
-    position:absolute;     
+    
+    position:absolute;  
+    width: -10px;    
     font-size: 24px;  
   }
   
