@@ -1,4 +1,4 @@
-//General inspiration og hjælp er fra Gemini A.i. (mange beskedder frem og tilbage inklusiv spørgsmål og efterspørgsler på kodegeneration i form af eksempler, alternativer, tests mm. (Det er foregået i individuelle chattråde. Én promt eller chattråd er derfor ikke aktuel ))
+//Hjælp fra Gemini, se bilag for promts fra Teodor
 document.addEventListener("DOMContentLoaded", function() {
 
   // Image data array
