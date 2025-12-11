@@ -11,7 +11,7 @@ if (personer.length>0){
 
     for (let i = 0; i < personer.length; i++) { 
       let person = personer[i]; 
-
+// Fået hjælp af CHAT GPT og W3-SCHOOL SE JANNES BILAG //
       boks.innerHTML += 
         '<div class="slides">' +
           '<div class="sliderContent">' +
@@ -28,7 +28,7 @@ if (personer.length>0){
     } 
 }
 
-
+// Fået hjælp af CHAT GPT og W3-SCHOOL SE JANNES BILAG //
 function right() {
   let bredde = boks.clientWidth;
   boks.scrollBy({ left: bredde, behavior: 'smooth' });
