@@ -1,3 +1,5 @@
+// Hej dette er min kode til hero'en på forsiden, jeg refererer til kildereferencen/promtbilag som er vedhæftet i zip-filen. 
+
 console.log("Script start: heromenu.js indlæst");
 
 let heroSection = document.querySelector('.hero');
